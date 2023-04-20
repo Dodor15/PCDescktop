@@ -1,0 +1,38 @@
+﻿<Window x:Class="PCDescktop.Pars"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCDescktop"
+        mc:Ignorable="d"
+        Title="Pars" Height="450" Width="800">
+    <WrapPanel HorizontalAlignment="Center" Orientation="Vertical">
+        <Label Content="Меню для парса в Базу"
+               FontSize="30"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+        <WrapPanel Orientation="Horizontal">
+            <Label Content="Ссылка: "/>
+            <TextBox Width="300" x:Name="URL"/>
+        </WrapPanel>
+        <ComboBox
+            Width="130"
+            x:Name="whoIs"
+            HorizontalAlignment="Center">
+            <Label>Мат. плата</Label>
+            <Label>Центр. процессор</Label>
+            <Label>Видеокарта</Label>
+            <Label>Оп. память</Label>
+            <Label>Накопитель</Label>
+            <Label>Блок питания</Label>
+            
+
+        </ComboBox>
+        <Button
+            Content="Запарсить"
+            x:Name="ToParceButton"
+            Click="ToParceButton_Click"/>
+        <Label x:Name="ResultLabel"/>
+        <Button x:Name="AddDataBase" Content="Если все правильно то нажимай и суй в базу" Click="AddDataBase_Click"/>
+    </WrapPanel>
+</Window>

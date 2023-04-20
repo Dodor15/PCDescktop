@@ -1,0 +1,36 @@
+﻿<Window x:Class="PCDescktop.Spravki.MBSpravka"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCDescktop.Spravki"
+        mc:Ignorable="d"
+        Title="MBSpravka" Height="450" Width="800">
+    <Grid>
+        <TextBlock TextWrapping="Wrap">
+            <Run>
+                Выбранная вами материнская плата
+            </Run>
+            <Run Text="{Binding MDName}" FontWeight="Bold" FontSize="12"/>
+            <Run>
+                Имеет данные характеристики:
+            </Run>
+            <LineBreak/>
+            <Run Text="{Binding CPUsocket}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Это название сокета под центральный процессор. Именно из за него выбирается какой процессор будет стоять в вашей сборке.</Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="{Binding GPUsocket}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Это уже сокет под дискретную видеокарту число 16 в ней обозначается кол-во пинов в разъеме которые используют различные ядра видеокарты. почти каждая материнская плата имеет хотя бы одну полную 16 пиновый разъем, так что выбор видеокарты уже зависит только от форм фактора вашего ПК.</Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="{Binding RAMsocket}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Каждой сборке нужна операивная память и втавляется она именно в эти разъемы, если вы хотите выбраить себе оперативную память всегда упирайтесь на эту харрактеристиук, так как в условынй DD5 плашку оперативной памяти нельзя вставить в разъем DD4 на материнской плате. нельзя вставить </Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="{Binding CountRAM}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Данное число показывает сколько плашек оперативной памяти можно вставить в разъем описанный сверху. Так же если у вас будет стоять не одна плашка а несколько, то компьютер будет работать эффективнее за счет многоканальности.</Run>
+
+        </TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="PCDescktop.ConfirmConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCDescktop"
+        mc:Ignorable="d"
+        Title="ConfirmConfig" Height="250" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="48"
+            Content="Назовите сборку"/>
+        <TextBox
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Width="350"
+            Height="30"
+            x:Name="NameConfig" TextChanged="NameConfig_TextChanged"/>
+        <Button
+            x:Name="SAVE"
+            Click="SAVE_Click"
+            Grid.Row="1"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Height="50"
+            Width="100"
+            Margin="0 0 0 20"
+            Content="Сохранить"/>
+    </Grid>
+</Window>

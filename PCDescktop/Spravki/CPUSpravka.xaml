@@ -1,0 +1,35 @@
+﻿<Window x:Class="PCDescktop.Spravki.CPUSpravka"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCDescktop.Spravki"
+        mc:Ignorable="d"
+        Title="CPUSpravka" Height="450" Width="800">
+    <Grid>
+        <TextBlock TextWrapping="Wrap">
+            <Run>Выбранный вами центральный процессор</Run>
+            <Run Text="{Binding CPUName}" FontWeight="Bold" FontSize="12"/>
+            <Run>Имеет данные характеристики:</Run>
+            <LineBreak/>
+            <Run Text="{Binding CPUsocket}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Название сокета процессора, только когда сокет процессора совпадает с сокетом в материнской плате процессора, сможет зарабатать.</Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run>Процессор имеет</Run>
+            <Run Text="{Binding CoreCount}" FontWeight="Bold" FontSize="12"/>
+            <Run> ядер и </Run>
+            <Run Text="{Binding StreamsCount}" FontWeight="Bold" FontSize="12"/>
+            <Run>потоков. Являются самыми важными характеристиками из за этого многие смотрят только на них но нельзя забывать про то что будет написано ниже.</Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="{Binding CoreHz}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Герцовка процессора, так же влияет на эффективность компьютера</Run>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="{Binding GraphicsCore}" FontWeight="Bold" FontSize="12"/>
+            <Run> - Показывает, есть ли в процессоре встроенная видеоядро, если оно отсутствует, то компьютер не сможет выводить картинку на экран без дискретной видеокарты.</Run>
+            
+        </TextBlock>
+    </Grid>
+</Window>
