@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SavedConfigs" Height="450" Width="800">
     <WrapPanel>
-        <ListBox x:Name="listbox" SelectionChanged="listbox_SelectionChanged">
+        <ListBox x:Name="listbox" SelectionChanged="listbox_SelectionChanged" Width="790">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

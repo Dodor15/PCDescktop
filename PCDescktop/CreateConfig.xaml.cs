@@ -126,16 +126,16 @@ namespace PCDescktop
             GPUComboBox.IsEnabled = true;
             RAMComboBox.IsEnabled = true;
 
-/*                using (var context = new ConfigContext())
-                {
-                    CPU = context.BDMotherBoards.Where(n => n.MDName == _C.BDMotherBoards.MDName).Select(p => p.CPUsocket).First();
-                    CPUComboBox.ItemsSource = context.DBCPUs.Where(s => s.CPUsocket == CPU).ToList();
-                    GPU = context.BDMotherBoards.Where(n => n.MDName == _C.BDMotherBoards.MDName).Select(p => p.GPUsocket).First();
-                    GPUComboBox.ItemsSource = context.DBGPUs.Where(s => s.GPUsocket == GPU).ToList();
-                    RAM = context.BDMotherBoards.Where(n => n.MDName == _C.BDMotherBoards.MDName).Select(p => p.RAMsocket).First();
-                    RAMComboBox.ItemsSource = context.DBRAMs.Where(s => s.RAMsocket == RAM).ToList();
-                }*/
-            
+            using (var context = new ConfigContext())
+            {
+                CPU = context.BDMotherBoards.Where(n => n.MDName == _C.BDMotherBoards.MDName).Select(p => p.CPUsocket).First();
+                CPUComboBox.ItemsSource = context.DBCPUs.Where(s => s.CPUsocket == CPU).ToList();
+                GPU = context.BDMotherBoards.Where(n => n.MDName == _C.BDMotherBoards.MDName).Select(p => p.GPUsocket).First();
+                GPUComboBox.ItemsSource = context.DBGPUs.Where(s => s.GPUsocket == GPU).ToList();
+                RAM = context.BDMotherBoards.Where(n => n.MDName == _C.BDMotherBoards.MDName).Select(p => p.RAMsocket).First();
+                RAMComboBox.ItemsSource = context.DBRAMs.Where(s => s.RAMsocket == RAM).ToList();
+            }
+
 
         }
         //чтоб сохранить нельзя нормально было

@@ -92,6 +92,8 @@ namespace PCDescktop
                         context.BDMotherBoards.Add(MB);
                         context.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        ResultLabel.Content = "";
+                        URL.Text = "";
                     }
                     break;
                 case 1:
@@ -110,6 +112,8 @@ namespace PCDescktop
                         context.DBCPUs.Add(cpu);
                         context.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        ResultLabel.Content = "";
+                        URL.Text = "";
                     }
                     break;
                 case 2:
@@ -127,6 +131,8 @@ namespace PCDescktop
                         context.DBGPUs.Add(gpu);
                         context.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        ResultLabel.Content = "";
+                        URL.Text = "";
                     }
                     break;
                 case 3:
@@ -142,6 +148,8 @@ namespace PCDescktop
                         context.DBRAMs.Add(ram);
                         context.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        ResultLabel.Content = "";
+                        URL.Text = "";
                     }
                     break;
                 case 4:
@@ -157,6 +165,8 @@ namespace PCDescktop
                         context.DBHDDs.Add(hdd);
                         context.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        ResultLabel.Content = "";
+                        URL.Text = "";
                     }
                     break;
                 case 5:
@@ -170,6 +180,8 @@ namespace PCDescktop
                         context.DBPowerUnits.Add(pu);
                         context.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        ResultLabel.Content = "";
+                        URL.Text = "";
                     }
                     break;
 
@@ -470,7 +482,15 @@ namespace PCDescktop
                         {
                             string[] word = tableData[i, 1].Split(' ');
                             ResultLabel.Content += "Питание " + word[0] + "\n";
-                            HDDPowerEat = Convert.ToInt32(word[0]);
+                            try
+                            {
+                                HDDPowerEat = Convert.ToInt32(word[0]);
+                            }
+                            catch
+                            {
+                                HDDPowerEat = 5;
+                            }
+                            
 
                         }
 

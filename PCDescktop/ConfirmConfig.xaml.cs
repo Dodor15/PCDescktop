@@ -52,6 +52,7 @@ namespace PCDescktop
                     {
                         contex.SaveChanges();
                         MessageBox.Show("Сохраненно");
+                        Close();
                     }
                     catch (Exception)
                     {
